@@ -1,0 +1,14 @@
+C:\Users\klebe\Desktop\uaitech\bin\Debug\net10.0\uaitech.exe
+C:\Users\klebe\Desktop\uaitech\bin\Debug\net10.0\uaitech.deps.json
+C:\Users\klebe\Desktop\uaitech\bin\Debug\net10.0\uaitech.runtimeconfig.json
+C:\Users\klebe\Desktop\uaitech\bin\Debug\net10.0\uaitech.dll
+C:\Users\klebe\Desktop\uaitech\bin\Debug\net10.0\uaitech.pdb
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.AssemblyInfoInputs.cache
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.AssemblyInfo.cs
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.csproj.CoreCompileInputs.cache
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.dll
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\refint\uaitech.dll
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.pdb
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\uaitech.genruntimeconfig.cache
+C:\Users\klebe\Desktop\uaitech\obj\Debug\net10.0\ref\uaitech.dll
