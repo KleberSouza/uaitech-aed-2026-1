@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("uaitech")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+2f01b219194b9957adb160afc628f892e6d98c10")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+22551f1758b3b912a4e7554a17b747e54bd27c53")]
 [assembly: System.Reflection.AssemblyProductAttribute("uaitech")]
 [assembly: System.Reflection.AssemblyTitleAttribute("uaitech")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -2,7 +2,6 @@
 
 class Program
 {
-
     static int Menu()
     {
         Console.WriteLine("===> UAI TECH <===");
@@ -11,6 +10,13 @@ class Program
         Console.WriteLine("3 - Editar Categoria");
         Console.WriteLine("4 - Apagar Categoria");
         Console.WriteLine("5 - Pesquisar Categoria");
+        
+        Console.WriteLine("6 - Adicionar Produto");
+        Console.WriteLine("7 - Listar Produtos");
+        Console.WriteLine("8 - Editar Produto");
+        Console.WriteLine("9 - Apagar Produto");
+        Console.WriteLine("10 - Pesquisar Produto");
+
         Console.WriteLine("0 - Sair");
         Console.Write("Digite a opção desejada: ");
         int op = int.Parse(Console.ReadLine());
@@ -21,7 +27,10 @@ class Program
     static void Main(string[] args)
     {
         int opcao = 0;
-        Categorias categorias = new Categorias(5);
+        
+        Categorias categorias = new Categorias();
+
+        Produtos produtos = new Produtos(categorias.lista);
 
         do
         {
@@ -39,6 +48,17 @@ class Program
                 case 4: categorias.Excluir();
                 break;
                 case 5: categorias.Pesquisar();
+                break;
+
+                case 6: produtos.Adicionar();
+                break;
+                case 7: produtos.Imprimir();
+                break;
+                case 8: produtos.Editar();
+                break;
+                case 9: produtos.Excluir();
+                break;
+                case 10: produtos.Pesquisar();
                 break;
             }
 

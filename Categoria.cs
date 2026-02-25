@@ -13,50 +13,40 @@ class Categoria
 
 class Categorias
 {
-    private Categoria[] lista;
-    private int n;
-    private int MAX;
+    public List<Categoria> lista;
 
-    public Categorias(int max)
+    public Categorias()
     {
-        MAX = max;
-        lista = new Categoria[max];
-        n=0;
+        lista = new List<Categoria>();
     }
 
     public void Adicionar()
     {
-        if(n == MAX)
-        {
-            Console.WriteLine("Lista cheia! :( )");            
-        }else{
+ 
             Categoria categoria = new Categoria();
             Console.Write("Digite o Id:");
             categoria.Id = int.Parse(Console.ReadLine());
 
-            Categoria cat1 = PesquisaPorId(categoria.Id);
-
-            if (cat1 != null)
+            if (lista.Any(x => x.Id == categoria.Id))
             {
                 Console.WriteLine("Id já cadastrado!");
-                cat1.Imprimir();
                 return;
             }
 
             Console.Write("Digite o Nome:");
             categoria.Nome = Console.ReadLine();
 
-            lista[n] = categoria;
-            n++;
-        }
-
+            lista.Add(categoria);
     }
 
     public void Imprimir()
     {
-        Console.WriteLine($"Categorias: {n}");
-        for(int i=0; i < n; i++)
-            lista[i].Imprimir();
+        Console.WriteLine($"Categorias: {lista.Count}");
+        //for(int i=0; i < lista.Count; i++)
+        //    lista[i].Imprimir();
+
+        foreach(var c in lista)
+            c.Imprimir();
     }
 
     public void Editar()
@@ -64,7 +54,7 @@ class Categorias
         Console.Write("Digite o Id:");
         int id = int.Parse(Console.ReadLine());
 
-        Categoria cat1 = PesquisaPorId(id);
+        Categoria cat1 = lista.Find(x => x.Id == id);
 
         if (cat1 != null)
         {
@@ -82,13 +72,11 @@ class Categorias
         Console.Write("Digite o Id:");
         int id = int.Parse(Console.ReadLine());
 
-        int index = PesquisarIndexPorId(id);
+        int index = lista.FindIndex(x => x.Id == id);
 
         if (index != -1)
         {
-            n--;
-            for(int i=index; i<n;i++)
-                lista[i] = lista[i+1];
+            lista.RemoveAt(index);
         }
         else
         {
@@ -101,8 +89,8 @@ class Categorias
         Console.Write("Digite o Id:");
         int id = int.Parse(Console.ReadLine());
 
-        Categoria cat1 = PesquisaPorId(id);
-
+        Categoria cat1 = lista.Find(x => x.Id == id);
+        
         if (cat1 != null)
         {
             cat1.Imprimir();
@@ -113,23 +101,7 @@ class Categorias
         }        
     }
 
-    public Categoria PesquisaPorId(int id)
-    {
-        for(int i=0; i < n; i++)
-        {
-            if(lista[i].Id == id)
-                return lista[i];
-        }
-        return null;
-    }
+   
 
-    public int PesquisarIndexPorId(int id)
-    {
-        for(int i=0; i < n; i++)
-        {
-            if(lista[i].Id == id)
-                return i;
-        }
-        return -1;
-    }
+  
 }
